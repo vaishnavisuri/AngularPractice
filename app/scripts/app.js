@@ -13,11 +13,11 @@ var app = angular.module('sampleExampleApp', ['ngRoute']);
 app.config(function ($routeProvider,$locationProvider) {
     $routeProvider
 
-      .when('/dashboard', {
+      .when('/', {
         templateUrl: 'views/dashboard.html',
         controller: 'DashCtrl'
       })
-      .when('/', {
+      .when('/login', {
         templateUrl: 'views/login.html',
         controller: 'loginCtrl'
       })
@@ -49,4 +49,10 @@ app.controller('loginCtrl', function ($scope,$location) {
 });
 app.controller('DashCtrl', function () {
 
+});
+
+app.controller('gobackCtrl', function ($scope) {
+  $scope.goback = function(){
+    history.back();
+  };
 });
