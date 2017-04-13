@@ -51,8 +51,8 @@ app.controller('DashCtrl', function () {
 
 });
 
-app.controller('gobackCtrl', function ($scope) {
-  $scope.goback = function(){
-    history.back();
-  };
-});
+//app.controller('gobackCtrl', function ($scope) {
+//  $scope.goback = function(){
+//    history.back();
+//  };
+//});

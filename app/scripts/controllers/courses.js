@@ -19,5 +19,8 @@ angular.module('sampleExampleApp')
       var i = $scope.courses.indexOf();
       $scope.courses.splice(i,1);
     };
+    $scope.goback = function(){
+     window.location.href('/dashboard');
+    };
 
   });

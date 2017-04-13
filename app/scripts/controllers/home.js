@@ -16,4 +16,7 @@ angular.module('sampleExampleApp')
   .controller('HomeCtrl', function ($scope) {
     console.log("Entered i  page");
     $scope.hmessage = "HOME PAGE";
+    $scope.goback = function(){
+      window.location.href('/dashboard');
+    };
   });
