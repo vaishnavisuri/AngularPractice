@@ -1,10 +1,29 @@
 <ul>
-  <li ng-repeat="y in students">
-{{y.name}}
+  <li ng-repeat="y in students | orderBy : 'name'">
+    {{y.name}}
+    <span>& my age is {{y.age}}</span>
   </li>
 </ul>
-
+<div ng-controller="StudentsCtrl">
+<input type="text" placeholder="search" ng-model="search">
+<table>
+  <thead>
+  <tr>
+    <th width="10%">NAME</th>
+    <th width="10%">AGE</th>
+  </tr>
+  <!--<tr><th>AGE</th></tr>-->
+  </thead>
+  <tbody>
+  <tr ng-repeat="y in students |  orderBy: '-age' | filter: search">
+    <td>{{y.name}}</td>
+    <td>{{y.age}}</td>
+  </tr>
+  </tbody>
+</table>
+</div>
 <br>
+
 <div ng-controller="gobackCtrl">
   <a href="" ng-click="goback()">back</a>
 </div>

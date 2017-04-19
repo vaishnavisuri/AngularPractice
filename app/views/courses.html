@@ -1,6 +1,6 @@
 <h3>{{cmessage}}</h3>
 <ol>
-  <li ng-repeat="x in courses  | limitTo : 10">
+  <li ng-repeat="x in courses track by $index">
     {{x}}
     <a href="" ng-click="remove()">remove</a>
   </li>

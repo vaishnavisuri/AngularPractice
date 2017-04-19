@@ -22,5 +22,4 @@ angular.module('sampleExampleApp')
     $scope.goback = function(){
      window.location.href('/dashboard');
     };
-
   });
